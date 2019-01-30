@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'me.nathan'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/io.vertx/vertx-core
+    compile group: 'io.vertx', name: 'vertx-core', version: '3.6.2'
+
+}
