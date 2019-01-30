@@ -13,7 +13,7 @@ public class WebsocketClient {
     public static void main(String[] args) {
         HttpClient client = Vertx.vertx().createHttpClient();
 
-        client.websocket(2158, "localhost", "/vision", websocket -> {
+        client.websocket(2158, "tegra-ubuntu", "/server", websocket -> {
             websocket.handler(data -> {
                 System.out.println("Received data " + data.toString("ISO-8859-1"));
                 client.close();

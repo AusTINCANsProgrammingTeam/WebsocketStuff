@@ -17,3 +17,10 @@ dependencies {
     compile group: 'io.vertx', name: 'vertx-core', version: '3.6.2'
 
 }
+
+jar {
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}
